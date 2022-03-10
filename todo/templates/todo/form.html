@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Django To-Do App - Create a Todo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+<div class=container>
+<form action="/todo/todos/" method="post" class="form-createtodo">
+    {% csrf_token %}
+    <div class="form-createtodo">
+      <label for="Title">Enter your Task: </label>
+      <input type="text" name="title" id="name" required>
+    </div>
+    <div class="form-createtodo">
+      <label for="email">Enter a description: </label>
+      <input type="text" id="description" name="description" required>
+    </div>
+    <div class="form-createtodo">
+      <input type="submit" value="Create!">
+    </div>
+</div>
+  </form>
+    </body>
+
+</html>
