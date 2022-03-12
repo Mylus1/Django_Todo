@@ -20,7 +20,7 @@
         <h2>{{todo.todo_complete}}</h2>
     </div>
     {% endfor %}
-    <button> Create a new todo </button>
+    <a href="{% url 'create_todo' %}" class="button">Create a new todo</a>
 </div>
     </body>
 </html>

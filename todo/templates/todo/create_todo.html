@@ -13,7 +13,7 @@
     </head>
     <body>
 <div class=container>
-<form action="/todo/todos/" method="post" class="form-createtodo">
+<form action="/todo/create/" method="post" class="form-createtodo">
     {% csrf_token %}
     <div class="form-createtodo">
       <label for="Title">Enter your Task: </label>
@@ -23,9 +23,18 @@
       <label for="email">Enter a description: </label>
       <input type="text" id="description" name="description" required>
     </div>
+    <label for="priority"> Please choose a priority</label>
+    <select class="priority" id="priority" name="priority">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
     <div class="form-createtodo">
       <input type="submit" value="Create!">
     </div>
+
 </div>
   </form>
     </body>

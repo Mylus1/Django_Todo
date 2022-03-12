@@ -12,13 +12,12 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <form>
-            <div class=container>
-                <form action="/todo/sign_up/" method="post" class="form-sign-up">
+        <div class=container>
+        <form action="/todo/sign_up/" method="post" class="form-sign-up">
                 {% csrf_token %}
                 <div class="form-sign-up">
                     <label for="Username"> Enter your username: </label>
-                    <input type="text" name="title" id="username" required>
+                    <input type="text" name="username" id="username" required>
                 </div>
                 <div class="form-sign-up">
                     <label for="Password"> Enter your password: </label>
@@ -32,6 +31,7 @@
                     <input type="submit" value="Sign Up!">
                   </div>
         </form>
+        </div>
 
 
 

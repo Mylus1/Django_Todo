@@ -9,5 +9,4 @@ class TodoAdmin(admin.ModelAdmin):
     readonly_fields = ("start_date",)
     list_filter = ("todo_complete", "priority")
 
-
 admin.site.register(Todo, TodoAdmin)
