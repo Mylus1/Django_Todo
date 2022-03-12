@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Todo(models.Model):
     title = models.CharField(max_length=150)
     description = models.TextField()
@@ -9,8 +10,3 @@ class Todo(models.Model):
 
     def __str__(self):
         return f"{self.title} [{self.todo_complete}]"
-    
-class User(models.Model):
-    username = models.CharField(max_length=150)
-    password = models.CharField(max_length=150)
-    email = models.EmailField()
