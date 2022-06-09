@@ -13,8 +13,15 @@
     </head>
     <body>
 <div class=container>
-    <a href="{% url 'create_todo' %}" class="button">Create a new todo</a>
-    <a href="{% url 'list_todos' %}" class="button">See full list of todos</a>
+    {% for todo in todos %}
+    <div>
+        <h1>{{todo.title}}</h1>
+        <h2>{{todo.description}}</h2>
+        <h2>{{todo.todo_complete}}</h2>
+    </div>
+    {% endfor %}   
+    <a href="{% url 'pri_1_todos' %}" class="button">See all priority 1 todos</a>
+
 </div>
     </body>
 </html>

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Todo
+from .models import TodoList, TodoItem
 
 
 class TodoAdmin(admin.ModelAdmin):
@@ -9,4 +9,4 @@ class TodoAdmin(admin.ModelAdmin):
     readonly_fields = ("start_date",)
     list_filter = ("todo_complete", "priority")
 
-admin.site.register(Todo, TodoAdmin)
+admin.site.register(TodoList, TodoItem, TodoAdmin)

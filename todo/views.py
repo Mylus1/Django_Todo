@@ -34,3 +34,9 @@ def sign_up(request):
         )
         return HttpResponseRedirect(reverse("index"))
     return render(request, "todo/sign_up.html")
+
+def list_todos(request):
+    if request.method == "GET":
+        all_todos = Todo.objects()
+        print(all_todos)
+    return render(request, 'todo/list_todos.html')
