@@ -9,7 +9,7 @@ class TodoList(models.Model):
     title = models.CharField(max_length=150)
     
     def get_absolute_url(self):
-        return reverse("lists" args=[self.id])
+        return reverse("lists", args=[self.id])
 
 class TodoItem(models.Model):
     title = models.CharField(max_length=150)

@@ -2,20 +2,20 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 from django.contrib.auth.models import User
-from .models import Todo
+from .models import TodoList, TodoItem
 
 # user creation example
 # user = User.objects.create_user(username, email, password)
 
 
 def index(request):
-    context = {"todos": Todo.objects.all()}
+    context = {"todos": TodoItem.objects.all()}
     return render(request, "todo/index.html", context)
 
 
 def create_todo(request):
     if request.method == "POST":
-        Todo.objects.create(
+        TodoItem.objects.create(
             title=request.POST["title"],
             description=request.POST["description"],
             priority=request.POST["priority"]
